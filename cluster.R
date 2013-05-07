@@ -49,6 +49,10 @@ for (month in c("201205", "201206", "201207", "201208", "201209", "201210", "201
   langLength<-apply(pruned.events.data, 1, vector.length)
   langNames <- as.character(events$language)
   langs.length <- data.frame(language=langNames, length=langLength)
+  ## if (month == "201302") {
+  ##   print(events[events$language=='Nemerle',])
+  ##   print(langs.length[order(langs.length$length),], decreasing=T)
+  ## }
     
   cluster.mean.length <- function(langs) {
     langsLength <- langs.length$length[langs.length$language %in% langs]
